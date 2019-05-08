@@ -2,6 +2,7 @@
 import random
 from flask import Flask, request
 from pymessenger.bot import Bot
+from environmental_variables import PORT
 
 app = Flask(__name__)
 ACCESS_TOKEN = 'EAAJmWIQajQABANiUNtsouzpnIQ2Oc4esTjZBdPi5ijezy73fZBwqHdUpTlWFirlW57hXNXsOPyZCwsBSNllYMGsfehoqpC10UXTHaEu7nFOdBEJdXLEE0wb7oYZAyY6ZBhXCpWMDgXGQnvBvdOJxPRSUaZBeR6AMQaFOZBZBDUJYhwZDZD'
@@ -69,4 +70,4 @@ def send_message(recipient_id, response):
     return "success"
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=PORT)
